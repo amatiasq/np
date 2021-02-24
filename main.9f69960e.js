@@ -149,7 +149,7 @@ var t=arguments[3];Object.defineProperty(exports,"__esModule",{value:!0}),export
 },{}],"PWpR":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.useScheduler=t;var e=require("react"),r=require("@amatiasq/scheduler");function t(t,a){const[c]=(0,e.useState)({callback:a}),[u]=(0,e.useState)(new r.Scheduler(t,()=>c.callback()));return c.callback=a,u}
 },{"react":"n8MK","@amatiasq/scheduler":"yFnU"}],"Hv83":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.useStack=t;var e=require("react");function t(t,u){const[r]=(0,e.useState)([]);return(0,e.useEffect)(()=>{void 0!==u&&r.push(u)},[]),[r,function(e){r.push(e),r.length>t&&(r.length=t)}]}
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.useStack=t;var e=require("react");function t(t,u){const[r]=(0,e.useState)([]);return(0,e.useEffect)(()=>{void 0!==u&&r.push(u)},[]),[r,function(e){r.unshift(e),r.length>t&&(r.length=t)}]}
 },{"react":"n8MK"}],"QTeZ":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Icon=r;var e=t(require("react"));function t(e){return e&&e.__esModule?e:{default:e}}function r({name:t,prefix:r="fas",className:s}){const[a,n]=t.includes(" ")?t.split(" "):[r,t];return e.default.createElement("i",{className:`${a} fa-${n} ${s||""}`})}
 },{"react":"n8MK"}],"pB42":[function(require,module,exports) {
@@ -582,4 +582,4 @@ var e=require("process");Object.defineProperty(exports,"__esModule",{value:!0}),
 },{"./App.scss":"JbKn","./shortcuts":"fDaA","react":"n8MK","react-dom":"NKHc","react-router-dom":"uc19","../7-components/EditGist/EditGistFromUrl":"DPNR","../7-components/GistList/GistList":"so0j","../7-components/Placeholder":"rUUQ","./useGithubAuth":"j8C7"}],"ZCfc":[function(require,module,exports) {
 "use strict";var e=t(require("localforage")),r=require("./4-dom/virtualKeyboardDetector"),a=require("./5-app/App"),i=require("./5-app/shortcuts");function t(e){return e&&e.__esModule?e:{default:e}}window.addEventListener("load",()=>{"serviceWorker"in navigator&&navigator.serviceWorker.register("/service-worker.js")});const o=document.getElementById("app-container");if(!o)throw new Error("Missing container element");(0,a.renderApp)(o),(0,i.initShorcuts)(),(0,r.onVirtualKeyboardDisplayChange)(e=>{e?o.classList.add("is-virtual-keyboard-open"):o.classList.remove("is-virtual-keyboard-open")}),Object.assign(window,{localforage:e.default});
 },{"localforage":"EM1A","./4-dom/virtualKeyboardDetector":"LmWj","./5-app/App":"yAPR","./5-app/shortcuts":"fDaA","./service-worker.js":[["service-worker.js","AaGI"],"service-worker.js.map","AaGI"]}]},{},["ZCfc"], null)
-//# sourceMappingURL=/main.ca191be0.js.map
+//# sourceMappingURL=/main.9f69960e.js.map
